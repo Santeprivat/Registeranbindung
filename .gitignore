@@ -1,0 +1,23 @@
+# Node.js-spezifisch
+node_modules/
+package-lock.json
+
+# Betriebssystem-spezifisch
+.DS_Store
+Thumbs.db
+
+# Entwicklungsumgebung-spezifisch
+.idea/           # IntelliJ IDEA
+.vscode/         # Visual Studio Code
+*.swp            # Swap-Dateien (z.B. von Vim)
+.env             # Umgebungsvariablen (lokal)
+
+# AWS-spezifisch (Lambda)
+.aws-sam/       # SAM CLI Build-Artefakte
+build/           # Build-Artefakte der Lambda-Funktion
+*.zip            # Zip-Dateien für den Lambda-Deployment
+
+# Sonstige
+*.log            # Log-Dateien
+tmp/             # Temporäre Dateien
+.DS_Store       # macOS-spezifische Desktop Services Store-Datei

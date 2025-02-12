@@ -1,16 +1,16 @@
-# Mein Webprojekt mit API-Anbindung
+# Mein Webprojekt mit Registeranbindung
 
-Dieses Projekt ist eine Webanwendung, die eine Verbindung zu einer API herstellt, um Daten abzurufen oder zu verarbeiten.
+Dieses Projekt ist eine Webanwendung, die eine Registeranfrage durchführt. Es ist auch ein in AWS implementierter Service, der Registeranfragen beantworten kann. 
 
 ## Beschreibung
 
 Beschreibe hier kurz und prägnant, was deine Webanwendung tut und welchen Zweck sie erfüllt. Zum Beispiel:
 
-> Diese Webanwendung ermöglicht es Benutzern, sich für den Newsletter anzumelden und ihre persönlichen Daten zu verwalten.
+> Diese Webanwendung ermöglicht es Benutzern, IDNr anzugeben und als Antwort aus einem Register Vorname, Nachname und Geburtsdatum zu bekommen.
 
 ## Technologien
 
-Liste hier alle Technologien auf, die in diesem Projekt verwendet werden. Zum Beispiel:
+Technologien auf, die in diesem Projekt verwendet werden:
 
 *   **Frontend:** Vue.js, HTML, CSS
 *   **Backend:** AWS Lambda, API Gateway
@@ -18,7 +18,9 @@ Liste hier alle Technologien auf, die in diesem Projekt verwendet werden. Zum Be
 
 ## Installation
 
-Beschreibe hier, wie man das Projekt lokal einrichten kann. Zum Beispiel:
+Aktivitäten um das Projekt lokal einzurichten:
+
+Hier zunächst nur als Beispiel, die Daten sind noch nicht korrekt.
 
 1.  Klone das Repository:
     ```bash
@@ -44,7 +46,7 @@ Beschreibe hier, wie man das Projekt lokal einrichten kann. Zum Beispiel:
 
 ## Verwendung
 
-Erkläre hier, wie man die Webanwendung starten und nutzen kann. Zum Beispiel:
+Die Webanwendung wird wie folgt gestartet und genutzt.
 
 1.  Starte den lokalen Entwicklungsserver für die Webseite:
     ```bash
@@ -56,32 +58,28 @@ Erkläre hier, wie man die Webanwendung starten und nutzen kann. Zum Beispiel:
 
 ## API-Endpunkte
 
-Liste hier alle API-Endpunkte auf, die von der Webanwendung verwendet werden, zusammen mit einer kurzen Beschreibung ihrer Funktion. Zum Beispiel:
+De Webanwendung verwendet folgende API-Endpunkte.
 
 *   `POST /Melderegisterauskunft`: Ruft die persönlichen Daten eines Benutzers anhand seiner IDNR ab.
 
 ## Lambda-Funktion
 
-Beschreibe hier kurz die Funktion deiner Lambda-Funktion und wie sie mit der API Gateway interagiert.
+Die AWS-Lambda-Funktion enthält die Anfrage und führt eine Datenbank-Abfrage durch.
 
 ## Deployment
 
-Erkläre hier, wie die Webanwendung und die Lambda-Funktion bereitgestellt werden können (z. B. auf AWS S3 und Lambda).
+Die Webanwendung wird auf AWS S3 bereitgestellt.
+Die Webanwendung ruft die im AWS API-Gateway veröffentlichte APIs
+Die Lambda-Funktion wird vom AWS API-Gateway aufgerufen und führt eine Datenbankabfrage durch.
 
 ## Contributing
 
-Falls du möchtest, dass andere an deinem Projekt mitarbeiten, erkläre hier, wie sie dazu beitragen können.
+Ich würde mich über Ideen und Anregungen freuen. Der Schwerpunkt liegt auf einer modernen Architektur, die alle Sicherheitsanforderungen erfüllt und nicht auf einem fachlich/inhaltlichen Feinschliff.
 
 ## Lizenz
 
-Gib hier die Lizenz an, unter der dein Projekt veröffentlicht wird (z. B. MIT-Lizenz).
+Dieses Projekt ist unter der MIT-Lizenz lizenziert.
 
 ## Kontakt
 
-Hier kannst du deine Kontaktdaten hinterlassen, falls jemand Fragen oder Anregungen hat.
-
-## Zusätzliche Tipps
-
-*   Verwende Markdown-Formatierung, um die `README.md`-Datei gut lesbar zu gestalten.
-*   Halte die `README.md`-Datei aktuell, wenn du Änderungen an deinem Projekt vornimmst.
-*   Du kannst auch Screenshots oder GIFs hinzufügen, um die Beschreibung anschaulicher zu gestalten.
+Bei Fragen oder Anregungen kontaktiere mich über lars@santesson.eu

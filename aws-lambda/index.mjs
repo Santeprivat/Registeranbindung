@@ -14,14 +14,14 @@ export const handler = async (event) => {
 
     if (!idnr) {
       return {
-        statusCode: 400,
+        statusCode: 400, // 400 Bad Request, wenn idnr fehlt
         body: JSON.stringify({ message: "Missing 'idnr' in request body" }),
       };
     }
 
     // DynamoDB nach der idnr durchsuchen
     const params = {
-      TableName: "DeineDynamoDBTabelle", // Name der Tabelle anpassen
+      TableName: "Melderegister",
       Key: {
         idnr: { S: idnr }, // idnr als Schlüssel
       },
@@ -31,11 +31,10 @@ export const handler = async (event) => {
     const command = new GetItemCommand(params);
     const data = await ddbClient.send(command);
 
-    // Wenn keine Daten gefunden werden, gebe eine Antwort zurück, die das angibt
+    // Wenn keine Daten gefunden werden, gebe 204 No Content zurück
     if (!data.Item) {
       return {
-        statusCode: 200,
-        body: JSON.stringify({ message: "No data found for the provided idnr" }),
+        statusCode: 204, // 204 No Content, wenn keine Daten gefunden
       };
     }
 
